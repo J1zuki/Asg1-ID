@@ -34,7 +34,7 @@ nav a {
     font-size: 15px;
 }
 
-.user-icon {
+.usericon {
     margin-left: 20px;
     font-size: 22px;
 }
@@ -62,16 +62,28 @@ p {
     line-height: 1.6;
 }
 
-.hero img,
-.videobox {
-    width: 80%;
-    height: 220px;
-    margin: 0 auto;
-    background: #ddd;
+.hero img {
+    width: 100%;
+    height: 800px;
     object-fit: cover;
+    display: block;
 }
 
-/* BUTTON */
+.videobox {
+    width: 100%;
+    background: #d7d7d7;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.videobox iframe {
+    width: 60%;
+    max-width: 800px;
+    height: 350px;
+    border: none;
+}
+
 .viewmembers {
     margin-top: 15px;
     padding: 10px 20px;
