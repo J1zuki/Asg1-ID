@@ -5,9 +5,8 @@
 }
 
 body {
-    font-family: Georgia, serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    overflow-x: hidden;
 }
 
 header {
@@ -49,16 +48,14 @@ section {
     margin-top: 0;
 }
 
-h1, h2 {
-    font-weight: bold;
-}
-
 h1 {
+    font-weight: bold;
     font-size: 30px;
     margin-top: 20px;
 }
 
 h2 {
+    font-weight: bold;
     font-size: 24px;
     margin-bottom: 15px;
 }
