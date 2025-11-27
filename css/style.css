@@ -105,60 +105,38 @@ p {
 .membersgrid {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
-    flex-direction: column;  /* stack vertically */
+    flex-direction: column;
     gap: 30px;
 }
 
 .membercard {
     background: #e6e6e6;
-    border-radius: 15px;
     padding: 25px;
+    border-radius: 15px;
     display: flex;
     gap: 25px;
-    text-align: left;              /* FIX: not centered */
-    width: 100%;                   /* full width */
+    text-align: left;
 }
 
 .photo {
     width: 180px;
     height: 180px;
     background: #ccc;
-    border-radius: 12px;           /* square with rounded corners */
+    border-radius: 12px;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 .member-info {
     flex: 1;
-}
-
-.member-info h3 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.member-info ul {
-    list-style: disc;
-    margin-left: 20px;
-    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .member-info p {
-    margin-top: 10px;
-    line-height: 1.5;
-    font-size: 15px;
-}
-
-.membercard ul {
-    list-style: disc;
-    list-style-position: inside;
-    padding: 0;
-    margin-top: 5px;
-    display: inline-block;
-    text-align: left;
+    margin-bottom: 8px;
 }
 
 video {
