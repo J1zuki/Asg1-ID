@@ -91,7 +91,7 @@ const members = [
         height: "150 cm (4’11”)",
         weight: "40 kg (88 lbs)",
         blood: "A",
-        instagram: "",
+        instagram: "https://instagram.com/75_yabuki",
         facts: "Smallest member with strong vocals and high notes. Former HKT48 center.",
         img: "./images/yabukinako.jpg"
     },
