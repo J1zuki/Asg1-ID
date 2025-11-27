@@ -15,7 +15,6 @@ header {
     align-items: center;
     padding: 15px 40px;
     border-bottom: 1px solid black;
-    margin-bottom: 0;
     background-color: black;
 }
 
@@ -41,11 +40,6 @@ nav a {
     color: white;
     text-decoration: none;
     cursor: pointer;
-}
-
-section {
-    padding-top: 0;
-    margin-top: 0;
 }
 
 h1 {
@@ -111,7 +105,8 @@ p {
 .membersgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    justify-items: center;
+    gap: 30px;
     padding: 20px 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -122,25 +117,24 @@ p {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    width: 250px;
-    margin: 0 auto;
+    width: 260px;
+}
+
+.photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .membercard ul {
     list-style: disc;
-    list-style-position: inside; 
+    list-style-position: inside;
     padding: 0;
-    margin: 5px auto 0;
+    margin-top: 5px;
+    display: inline-block;
     text-align: left;
-    width: fit-content;
-}
-
-.photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
 }
 
 video {
