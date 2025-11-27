@@ -41,8 +41,11 @@ members.forEach(m => {
                 <p><b>Height:</b> ${m.height}</p>
                 <p><b>Weight:</b> ${m.weight}</p>
                 <p><b>Blood Type:</b> ${m.blood}</p>
-                <p><b>Instagram:</b> ${m.instagram}</p>
-
+                <p><b>Instagram:</b> 
+                    <a href="${m.instagram}" target="_blank" class="insta-link">
+                        ${m.instagram}
+                    </a>
+                </p>
                 <p><b>Facts:</b><br>${m.facts}</p>
             </div>
 
