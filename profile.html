@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+
+<header>
+    <img src="./images/IzoneLogo.png" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="albums.html">Albums</a>
+        <a href="products.html">Products</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contactus.html">Contact Us</a>
+    </nav>
+    <a href="profile.html" class="usericon">👤</a>
+</header>
+
+
+<section class="profile-section">
+    <div class="profile-photo-wrapper">
+        <div class="profile-row">
+            <div class="profile-photo" id="profilePreview"></div>
+
+            <!-- Edit Icon (opens file upload) -->
+            <span class="edit-icon-side" onclick="document.getElementById('profileUpload').click();">✏️</span>
+        </div>
+
+        <!-- Hidden File Input -->
+        <input type="file" id="profileUpload" accept="image/*" style="display:none;">
+
+        <span class="username">@KangYeshin</span>
+    </div>
+
+    <!-- Account Info Box -->
+    <div class="account-box">
+        <h3>Account Information ✏️</h3>
+        <br>
+        <br>
+        <p><strong>Name:</strong> Kang Yeshin</p>
+        <p><strong>Email:</strong> kangyeshin@email.com</p>
+        <p><strong>Phone:</strong> +65 9123 4567</p>
+        <p><strong>Address:</strong> 123, Jurong West Street 52, Singapore 640123</p>
+        <p><strong>Payment:</strong> Visa •••• 5239</p>
+    </div>
+
+    <!-- Order Summary Tabs -->
+    <h3 class="order-title">Order Summary:</h3>
+
+    <div class="order-tabs">
+        <button class="order-tab">Pending</button>
+        <button class="order-tab">Shipped</button>
+        <button class="order-tab">Completed</button>
+    </div>
+
+    <!-- Order Cards (3x) -->
+    <div class="order-card">
+        <img src="./images/placeholder.png" class="order-img">
+        <div class="order-info">
+            <p><strong>Product Name</strong></p>
+            <p>Color: White</p>
+            <p>Price: SGD $29.00</p>
+        </div>
+        <button class="order-status">Completed</button>
+    </div>
+
+    <div class="order-card">
+        <img src="./images/placeholder.png" class="order-img">
+        <div class="order-info">
+            <p><strong>Product Name</strong></p>
+            <p>Color: White</p>
+            <p>Price: SGD $29.00</p>
+        </div>
+        <button class="order-status">Completed</button>
+    </div>
+
+    <div class="order-card">
+        <img src="./images/placeholder.png" class="order-img">
+        <div class="order-info">
+            <p><strong>Product Name</strong></p>
+            <p>Color: White</p>
+            <p>Price: SGD $29.00</p>
+        </div>
+        <button class="order-status">Completed</button>
+    </div>
+
+</section>
+
+
+<footer>
+    ©2025 Copyright © IZ*ONE Fandom
+</footer>
+
+<script>
+const uploadInput = document.getElementById("profileUpload");
+const preview = document.getElementById("profilePreview");
+
+uploadInput.addEventListener("change", function() {
+    const file = this.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.style.backgroundImage = `url('${e.target.result}')`;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+
+</body>
+</html>
