@@ -1,0 +1,81 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    color: white;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.usericon {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Fix album section width */
+.album-section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* FIX: MAKE ALBUM CARD LEFT–RIGHT (your wireframe layout) */
+.album-card {
+    display: flex;                  /* forces left/right layout */
+    flex-direction: row;
+    background: rgba(0,0,0,0.5);    /* dark transparent bg */
+    padding: 25px;
+    border-radius: 15px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.album-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #222;
+}
+
+.album-info {
+    flex: 1;
+    text-align: left;
+}
+
+.album-info h2 {
+    margin-top: 0;
+}
+
+.album-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: white;
+}
