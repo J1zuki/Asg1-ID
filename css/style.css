@@ -8,7 +8,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 
-    background-image: url("./images/background.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,17 +58,20 @@ h1 {
     font-weight: bold;
     font-size: 30px;
     margin-top: 20px;
+    color: white;
 }
 
 h2 {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 15px;
+    color: white;
 }
 
 p {
     font-size: 15px;
     line-height: 1.6;
+    color: white;
 }
 
 .hero img {
@@ -96,7 +99,7 @@ p {
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 15px;
-    border: 1px solid black;
+    border: 1px solid white;
     background: white;
     color: black;
     cursor: pointer;
@@ -110,7 +113,7 @@ p {
 
 .divider {
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     margin: 25px 0;
 }
 
