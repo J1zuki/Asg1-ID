@@ -49,22 +49,22 @@
 
         <div class="contact-info">
             <p>
-                <img src="./images/email-icon.png">
+                <img src="./images/gmailicon.png">
                 <a href="mailto:izoneofficial@gmail.com">izoneofficial@gmail.com</a>
             </p>
 
             <p>
-                <img src="./images/instagram-icon.png">
+                <img src="./images/instagramicon.png">
                 <a href="https://www.instagram.com/official_izone/">@official_izone</a>
             </p>
 
             <p>
-                <img src="./images/youtube-icon.png">
+                <img src="./images/youtubeicon.png">
                 <a href="https://www.youtube.com/@officializone">IZ*ONE Official</a>
             </p>
 
             <p>
-                <img src="./images/label-icon.png">
+                <img src="./images/buildingicon.png">
                 <span>Stone Music Entertainment</span>
             </p>
         </div>
@@ -73,5 +73,38 @@
     <footer>
         2025 Copyright © IZ*ONE Fandom
     </footer>
+
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <h2>Message Sent!</h2>
+            <p>We will get back to you soon.</p>
+            <button id="closeModal">OK</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector("form");
+        const modal = document.getElementById("popupModal");
+        const closeBtn = document.getElementById("closeModal");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault(); 
+
+            modal.style.display = "flex"; // show modal
+            form.reset(); // optional: clear form fields
+        });
+
+        // Close modal when clicking OK
+        closeBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        // Close modal when clicking outside the modal box
+        window.onclick = (e) => {
+            if (e.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
