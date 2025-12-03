@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="./css/editprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/IzoneLogo.png" class="logo" alt="IZ*ONE Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="albums.html">Albums</a>
+            <a href="products.html">Products</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <a href="profile.html" class="usericon">👤</a>
+    </header>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="editprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="arrow-container">
+        <a href="profile.html" class="back-arrow">
+            <i class="fa-solid fa-rotate-left"></i>
+        </a>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-img" id="profilePreview">
+            <label class="upload-btn">
+                <i class="fa-solid fa-plus"></i>
+                <input type="file" id="profileUpload" accept="image/*">
+            </label>
+        </div>
+        <p class="username">@KangYeShin</p>
+    </div>
+
+    <form id="editForm">
+        <div class="form-box">
+            <h3 class="form-title">
+                <em>Account Information Update</em>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </h3>
+
+            <label>Name</label>
+            <input type="text" id="nameInput" required>
+
+            <label>Email</label>
+            <input type="email" id="emailInput" required>
+
+            <label>Phone</label>
+            <input type="text" id="phoneInput" required>
+
+            <label>Date Of Birth</label>
+            <div class="dob-row">
+                <input type="date" id="dobInput" required>
+            </div>
+
+            <label>Address</label>
+            <input type="text" id="addressInput" required>
+
+            <label>Credit Card (If Changed)</label>
+            <input type="text" id="cardInput" required>
+
+            <button class="change-btn" type="submit">Change</button>
+
+        </div>
+    </form>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p>Information has been updated successfully</p>
+            <button id="closeModal">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Copyright © IZ*ONE Fandom</p>
+    </footer>
+
+    <script>
+        document.getElementById("profileUpload").addEventListener("change", function(event){
+            const reader = new FileReader();
+            reader.onload = function(){
+                document.getElementById("profilePreview").style.backgroundImage = `url(${reader.result})`;
+                document.getElementById("profilePreview").style.backgroundSize = "cover";
+                document.getElementById("profilePreview").style.backgroundPosition = "center";
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        });
+    </script>
+
+    <script>
+        document.querySelector(".change-btn").addEventListener("click", function(e){
+            const form = document.querySelector("form");
+            if (!form.checkValidity()) {
+                form.reportValidity();  
+                return;
+            }
+            document.getElementById("successModal").style.display = "block";
+        });
+        document.getElementById("closeModal").addEventListener("click", function(){
+            document.getElementById("successModal").style.display = "none";
+        });
+    </script>
+</body>
+</html>

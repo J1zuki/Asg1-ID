@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+    background-color: black;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.usericon {
+    margin-left: 20px;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.arrow-container {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.back-arrow i {
+    font-size: 28px;
+    color: white;
+}
+
+.profile-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    overflow: visible !important;
+}
+
+.upload-btn {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    background: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-btn i {
+    color: white;
+    font-size: 16px;
+}
+
+.upload-btn input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.username {
+    color: white;
+    margin-top: 5px;
+}
+
+.form-box {
+    width: 75%;
+    max-width: 750px;
+    background: #d9d9d9;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dob-row {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.dob-row input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dob-icon {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.change-btn {
+    display: block;
+    margin: 30px auto;
+    width: 40%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px 30px;
+    width: 320px;
+    border-radius: 10px;
+    margin: 15% auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+#closeModal {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background: red;
+    cursor: pointer;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+}
