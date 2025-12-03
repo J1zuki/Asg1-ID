@@ -22,7 +22,7 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
 
-        <i class="fa-solid fa-user usericon"></i>
+        <a href="profile.html" class="usericon">👤</a>
     </header>
 
     <div class="title">
@@ -33,7 +33,7 @@
     <div class="ticket-container">
         <div class="ticket-left">
             <div class="image-box">
-                <i class="fa-regular fa-image"></i>
+                <img src="../images/izone.jpg" alt="Ticket Image">
             </div>
 
             <select class="select-box" id="dateSelect" required>
@@ -113,7 +113,13 @@
                 <p id="summaryTotal">SGD 0.00</p>
             </div>
 
-            <button class="pay-btn">Proceed to Pay</button>
+            <button class="pay-btn" onclick="goToPayment()">Proceed to Pay</button>
+
+            <script>
+                function goToPayment() {
+                    window.location.href = "ticketspayment.html";
+                }
+            </script>
         </div>
     </div>
 
@@ -121,7 +127,6 @@
         <p>2025 Copyright © IZ*ONE Fandom</p>
     </footer>
 
-    <!-- JS -->
     <script src="./js/tickets.js"></script>
 
     <script>
