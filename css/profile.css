@@ -55,12 +55,10 @@ nav a {
     text-align: center;
 }
 
-/* Profile Photo */
 .profile-photo-wrapper {
     text-align: center;
 }
 
-/* Row for profile image + edit button */
 .profile-row {
     display: flex;
     justify-content: center;
@@ -68,7 +66,6 @@ nav a {
     gap: 15px;
 }
 
-/* Profile Picture */
 .profile-photo {
     width: 140px;
     height: 140px;
@@ -79,7 +76,6 @@ nav a {
     background-position: center;
 }
 
-/* Edit Icon beside profile */
 .edit-icon-side {
     width: 35px;
     height: 35px;
@@ -100,7 +96,6 @@ nav a {
     align-items: center;
 }
 
-/* Account Information Box */
 .account-box {
     background: #e6e6e6;
     padding: 25px;
@@ -114,7 +109,6 @@ nav a {
     margin-top: 0;
 }
 
-/* Order Summary */
 .order-title {
     margin-top: 40px;
     font-size: 22px;
@@ -131,16 +125,15 @@ nav a {
 .order-tab {
     padding: 10px 20px;
     border-radius: 20px;
-    border: 1px solid #999;
+    border: 1px solid white;
     background: white;
     cursor: pointer;
 }
 
-/* Order Cards */
 .order-card {
     width: 85%;
     margin: 20px auto;
-    background: #f5f5f5;
+    background: white;
     padding: 15px;
     border-radius: 15px;
     display: flex;
@@ -153,7 +146,7 @@ nav a {
     height: 90px;
     object-fit: cover;
     border-radius: 10px;
-    background: #ccc;
+    background: white;
 }
 
 .order-info {
@@ -167,7 +160,7 @@ nav a {
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 14px;
-    background: #dcdcdc;
+    background: white;
 }
 
 footer {
@@ -175,5 +168,6 @@ footer {
     padding: 20px;
     margin-top: 40px;
     font-size: 14px;
-    color: #555;
+    background: black;
+    color: white;
 }
