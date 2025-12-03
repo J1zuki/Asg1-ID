@@ -55,7 +55,7 @@
             </select>
 
            <select class="select-box" id="ticketSelect">
-                <option disabled selected>Select Ticket</option>
+                <option value="" data-price="0" disabled selected>Select Ticket</option>
                 <option value="VIP" data-price="280">VIP (SGD 280)</option>
                 <option value="Standing" data-price="120">Standing (SGD 120)</option>
             </select>
@@ -91,7 +91,8 @@
                 <p>Quantity</p>
                 <p id="summaryQty">—</p>
             </div>
-
+            <br>
+            <br>
             <div class="summary-row">
                 <p>Subtotal</p>
                 <p id="summarySubtotal">SGD 0.00</p>
@@ -121,7 +122,7 @@
     </footer>
 
     <!-- JS -->
-    <script src="./js/ticket.js"></script>
+    <script src="./js/tickets.js"></script>
 
     <script>
         document.querySelector(".book-btn").addEventListener("click", function () {

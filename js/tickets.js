@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ticketSelect.addEventListener("change", function () {
         ticketType = this.value;
-        ticketPrice = Number(this.options[this.selectedIndex].dataset.price);
+        ticketPrice = Number(this.options[this.selectedIndex].dataset.price || 0);
         updateSummary();
     });
-
+    
     qtyInput.addEventListener("input", function () {
         if (qtyInput.value < 1) qtyInput.value = 1;
         updateSummary();
