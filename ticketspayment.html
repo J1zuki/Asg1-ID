@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Assignment 1 - Tickets</title>
+    <link rel="stylesheet" href="./css/ticketspayment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/IzoneLogo.png" class="logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="albums.html">Albums</a>
+            <a href="products.html">Products</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <a href="profile.html" class="usericon">👤</a>
+    </header>
+
+    <div class="payment-page">
+        <div class="back-row">
+            <span class="back-icon">&#8630;</span>
+            <h2>Payment</h2>
+        </div>
+
+        <div class="payment-box">
+
+            <label>Card Number</label>
+            <input type="text">
+
+            <div class="row">
+                <div class="half">
+                    <label>Expiry Date</label>
+                    <input type="text">
+                </div>
+                <div class="half">
+                    <label>CVV</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <label>Name on Card</label>
+            <input type="text">
+
+            <label>Billing Address</label>
+            <input type="text">
+
+            <label>Country</label>
+            <div class="dropdown-container">
+                <select>
+                    <option selected disabled>Select</option>
+                    <option>Singapore</option>
+                    <option>Malaysia</option>
+                    <option>Indonesia</option>
+                </select>
+            </div>
+
+        </div>
+
+        <h3 class="summary-title">Order Summary</h3>
+        <table class="summary-table">
+            <tr>
+                <td>Date</td>
+                <td>21st December 2025</td>
+            </tr>
+            <tr>
+                <td>Ticket Type</td>
+                <td>VIP</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <hr class="divider">
+        <table class="summary-table">
+            <tr>
+                <td>Subtotal</td>
+                <td>SGD $840.00</td>
+            </tr>
+            <tr>
+                <td>GST</td>
+                <td>SGD $9.00</td>
+            </tr>
+            <tr>
+                <td>Service Charge (5%)</td>
+                <td>SGD $5.00</td>
+            </tr>
+            <tr class="total-row">
+                <td><b>Total</b></td>
+                <td><b>SGD $854.00</b></td>
+            </tr>
+        </table>
+
+        <button class="submit-btn">Submit</button>
+
+        <footer class="payment-footer">2025 Copyright © IZONE Fandom</footer>
+    </div>
+</body>
+</html>

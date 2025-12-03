@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+    background-color: black;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.usericon {
+    margin-left: 20px;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-page {
+    width: 430px;
+    margin: 0 auto;
+    padding: 10px 0 40px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Back icon + Payment title */
+.back-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.back-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Payment form grey box */
+.payment-box {
+    background: #e6e6e6;
+    padding: 25px 22px;
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.payment-box label {
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.payment-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    background: #f7f7f7;
+}
+
+/* Expiry + CVV Row */
+.row {
+    display: flex;
+    gap: 18px;
+    margin-top: 5px;
+}
+
+.half {
+    flex: 1;
+}
+
+/* Dropdown */
+.dropdown-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background: #f7f7f7;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Summary Title */
+.summary-title {
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* Summary table layout */
+.summary-table {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.summary-table td {
+    padding: 4px 0;
+}
+
+/* Divider line */
+.divider {
+    border: none;
+    border-top: 1px solid #cfcfcf;
+    margin: 18px 0;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    margin: 35px auto 0 auto;
+    padding: 14px 70px;
+    font-size: 18px;
+    background: #d9d9d9;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Footer */
+.payment-footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    opacity: 0.8;
+}
