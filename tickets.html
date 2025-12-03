@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Assignment 1 - Tickets</title>
+    <link rel="stylesheet" href="./css/tickets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/IzoneLogo.png" class="logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="albums.html">Albums</a>
+            <a href="products.html">Products</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <i class="fa-solid fa-user usericon"></i>
+    </header>
+
+    <div class="title">
+        <h2>IZ*ONE Reunion Concert</h2>
+        <p>Singapore Stadium</p>
+    </div>
+
+    <div class="ticket-container">
+        <div class="ticket-left">
+            <div class="image-box">
+                <i class="fa-regular fa-image"></i>
+            </div>
+
+            <select class="select-box" id="dateSelect" required>
+                <option value="" disabled selected>Select Date</option>
+                <option value="21st December 2025">21st December 2025</option>
+                <option value="22nd December 2025">22nd December 2025</option>
+                <option value="23rd December 2025">23rd December 2025</option>
+                <option value="24th December 2025">24th December 2025</option>
+            </select>
+
+            <select class="select-box" id="timeSelect" required>
+                <option value="" disabled selected>Select Time</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+            </select>
+
+           <select class="select-box" id="ticketSelect">
+                <option disabled selected>Select Ticket</option>
+                <option value="VIP" data-price="280">VIP (SGD 280)</option>
+                <option value="Standing" data-price="120">Standing (SGD 120)</option>
+            </select>
+
+            <p class="label">Quantity</p>
+            <input type="number" id="qtyInput" min="1" value="1" class="qty-input">
+
+            <button class="book-btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div id="orderSummary" style="display:none;">
+        <hr class="divider">
+        <div class="summary-section">
+            <h3>Order Summary</h3>
+
+            <div class="summary-row">
+                <p>Date</p>
+                <p id="summaryDate">—</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Time</p>
+                <p id="summaryTime">—</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Ticket Type</p>
+                <p id="summaryType">—</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Quantity</p>
+                <p id="summaryQty">—</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Subtotal</p>
+                <p id="summarySubtotal">SGD 0.00</p>
+            </div>
+
+            <div class="summary-row">
+                <p>GST (7%)</p>
+                <p id="summaryGST">SGD 0.00</p>
+            </div>
+
+            <div class="summary-row">
+                <p>Service Charge (5%)</p>
+                <p id="summaryService">SGD 0.00</p>
+            </div>
+
+            <div class="summary-row total">
+                <p>Total</p>
+                <p id="summaryTotal">SGD 0.00</p>
+            </div>
+
+            <button class="pay-btn">Proceed to Pay</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Copyright © IZ*ONE Fandom</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/ticket.js"></script>
+
+    <script>
+        document.querySelector(".book-btn").addEventListener("click", function () {
+            document.getElementById("orderSummary").style.display = "block";
+            window.scrollTo({
+                top: document.getElementById("orderSummary").offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
