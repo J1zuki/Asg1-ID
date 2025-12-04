@@ -108,13 +108,10 @@
                 this.reportValidity();
             }
         });
-
-        // OK Button → Close popup + Clear form
         document.getElementById("popupBtn").addEventListener("click", function() {
             document.getElementById("popupOverlay").style.display = "none";
-
-            // Clear all inputs in the form
             document.getElementById("paymentForm").reset();
+            window.location.href = "tickets.html"; 
         });
     </script>
 </body>
