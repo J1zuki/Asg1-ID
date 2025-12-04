@@ -167,11 +167,19 @@ nav a {
     gap: 35px;
     width: 80%;
     margin: 30px auto;
+    align-items: center;
 }
 
 .product-card {
-    text-align: left;
+    text-align: center;
     color: white;
+}
+
+.product-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .product-card img {
@@ -183,11 +191,12 @@ nav a {
 }
 
 .small-cart-btn {
-    margin-top: 10px;
-    padding: 7px 15px;
+    padding: 10px 20px;
     border-radius: 20px;
-    background: #eee;
     border: 1px solid #444;
+    background: #eee;
+    cursor: pointer;
+    display: block;
 }
 
 .product-name {
@@ -196,8 +205,9 @@ nav a {
 
 .product-top {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .product-top img {
