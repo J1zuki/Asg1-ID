@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Assignment 1 - Cart</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/carts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./images/IzoneLogo.png" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="albums.html">Albums</a>
+            <a href="products.html">Products</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <a href="profile.html" class="usericon"><i class="fa-solid fa-user"></i></a>
+    </header>
+
+    <div class="cart-header-row">
+        <a href="products.html" class="back-arrow">
+            <i class="fa-solid fa-rotate-left"></i>
+        </a>
+
+        <h2 class="cart-title">Cart</h2>
+    </div>
+
+    <section class="cart-items">
+
+        <!-- ITEM 1 -->
+        <div class="cart-card">
+            <img src="./images/Izone Hoodie 1.jpg">
+            <div class="cart-info">
+                <h3>IZ*ONE Hoodie</h3>
+                <p class="qty">x1</p>
+                <p class="price">SGD 39.00</p>
+            </div>
+            <i class="fa-solid fa-trash delete"></i>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="cart-card">
+            <img src="./images/Izone Bag 1.jpg">
+            <div class="cart-info">
+                <h3>IZ*ONE Backpack</h3>
+                <p class="qty">x1</p>
+                <p class="price">SGD 39.00</p>
+            </div>
+            <i class="fa-solid fa-trash delete"></i>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="cart-card">
+            <img src="./images/Izone Notebook 1.jpg">
+            <div class="cart-info">
+                <h3>IZ*ONE Color Notebook</h3>
+                <p class="qty">x1</p>
+                <p class="price">SGD 28.00</p>
+            </div>
+            <i class="fa-solid fa-trash delete"></i>
+        </div>
+
+    </section>
+
+    <section class="order-summary">
+        <h3>Order Summary</h3>
+
+        <div class="summary-row">
+            <p>1x IZ*ONE Hoodie</p>
+            <p>SGD 39.00</p>
+        </div>
+
+        <div class="summary-row">
+            <p>1x IZ*ONE Backpack</p>
+            <p>SGD 39.00</p>
+        </div>
+
+        <div class="summary-row">
+            <p>1x IZ*ONE Color Notebook</p>
+            <p>SGD 28.00</p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="summary-row">
+            <p>Subtotal</p>
+            <p>SGD 126.00</p>
+        </div>
+
+        <div class="summary-row">
+            <p>GST</p>
+            <p>SGD 8.82</p>
+        </div>
+
+        <div class="summary-row">
+            <p>Service Charge (5%)</p>
+            <p>SGD 6.30</p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="summary-total">
+            <p>Total Amount</p>
+            <p>SGD 141.12</p>
+        </div>
+
+        <button class="pay-btn" onclick="window.location.href='productpayment.html'">
+            Proceed To Pay
+        </button>
+    </section>
+
+    <script>
+        document.querySelectorAll(".delete").forEach(button => {
+            button.addEventListener("click", function () {
+
+                // Remove the entire cart item
+                this.closest(".cart-card").remove();
+            });
+        });
+    </script>
+
+    <footer>
+        <p>2025 Copyright © IZ*ONE Fandom</p>
+    </footer>
+</body>
+</html>
