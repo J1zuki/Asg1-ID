@@ -165,3 +165,101 @@ footer {
     background-color: black;
     color: white;
 }
+
+/* MOBILE VERSION – activate when screen < 768px */
+@media (max-width: 620px) {
+
+    /* NAVIGATION */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Logo centered */
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    /* Stack menu vertically but centered */
+    header nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    header nav a {
+        color: white;
+        font-size: 18px;
+        padding: 6px 0;
+    }
+
+    /* Center the user icon beneath menu */
+    header .usericon {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    /* Remove leftover right alignment */
+    header nav a,
+    header .usericon {
+        text-align: center !important;
+    }
+    /* PRODUCT SECTION / CONTENT SECTION */
+    .product-detail-card,
+    .product-grid,
+    .members-section,
+    .albums-section,
+    .ticket-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* PRODUCT DETAIL (your hoodie layout) */
+    .product-detail-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image-large img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .product-detail-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 25px;
+        width: 90%;
+    }
+
+    .product-card img {
+        width: 70%;
+        height: auto;
+    }
+
+    /* GENERAL TEXT */
+    h1, h2, h3, p {
+        text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 15px 5px;
+    }
+}
