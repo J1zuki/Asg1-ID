@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Assignment 1 - Product Payment</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/productpayment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/IzoneLogo.png" class="logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="albums.html">Albums</a>
+            <a href="products.html">Products</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <a href="profile.html" class="usericon">👤</a>
+    </header>
+
+    <div class="arrow-container">
+        <a href="cart.html" class="back-arrow">
+            <i class="fa-solid fa-rotate-left"></i>
+        </a>
+
+        <h2>Payment</h2>
+    </div>
+
+    <div class="payment-page">
+        <div class="payment-box">
+            <form id="paymentForm">
+                <label>Card Number</label>
+                <input id="cardNumber" type="text" maxlength="16" pattern="\d{16}" required>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="half">
+                        <label>Expiry Date</label>
+                        <input id="expiryDate" type="text" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="half">
+                        <label>CVV</label>
+                        <input id="cvv" type="text" maxlength="3" pattern="\d{3}" required>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <label>Name on Card</label>
+                <input id="cardName" type="text" required>
+
+                <br>
+                <br>
+
+                <label>Billing Address</label>
+                <input id="billingAddress" type="text" required>
+
+                <br>
+                <br>
+                
+                <label>Country</label>
+                <select id="country" required>
+                    <option disabled selected value="">Select</option>
+                    <option>Singapore</option>
+                    <option>Malaysia</option>
+                    <option>Indonesia</option>
+                    <option>Thailand</option>
+                    <option>Japan</option>
+                    <option>South Korea</option>
+                </select>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <p id="popupText">Payment has been paid successfully!</p>
+            <button id="popupBtn">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Copyright © IZ*ONE Fandom</p>
+    </footer>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (this.checkValidity()) {
+                document.getElementById("popupOverlay").style.display = "flex";
+            } else {
+                this.reportValidity();
+            }
+        });
+        document.getElementById("popupBtn").addEventListener("click", function() {
+            document.getElementById("popupOverlay").style.display = "none";
+            document.getElementById("paymentForm").reset();
+            window.location.href = "products.html"; 
+        });
+    </script>
+</body>
+</html>
