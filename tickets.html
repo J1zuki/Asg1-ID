@@ -36,6 +36,9 @@
                 <img src="../images/izone.jpg" alt="Ticket Image">
             </div>
 
+            <br>
+            <br>
+
             <select class="select-box" id="dateSelect" required>
                 <option value="" disabled selected>Select Date</option>
                 <option value="21st December 2025">21st December 2025</option>
@@ -43,6 +46,9 @@
                 <option value="23rd December 2025">23rd December 2025</option>
                 <option value="24th December 2025">24th December 2025</option>
             </select>
+
+            <br>
+            <br>
 
             <select class="select-box" id="timeSelect" required>
                 <option value="" disabled selected>Select Time</option>
@@ -54,11 +60,17 @@
                 <option value="8:00 PM">8:00 PM</option>
             </select>
 
+            <br>
+            <br>
+
            <select class="select-box" id="ticketSelect">
                 <option value="" data-price="0" disabled selected>Select Ticket</option>
                 <option value="VIP" data-price="280">VIP (SGD 280)</option>
                 <option value="Standing" data-price="120">Standing (SGD 120)</option>
             </select>
+
+            <br>
+            <br>
 
             <p class="label">Quantity</p>
             <input type="number" id="qtyInput" min="1" value="1" class="qty-input">
@@ -128,15 +140,5 @@
     </footer>
 
     <script src="./js/tickets.js"></script>
-
-    <script>
-        document.querySelector(".book-btn").addEventListener("click", function () {
-            document.getElementById("orderSummary").style.display = "block";
-            window.scrollTo({
-                top: document.getElementById("orderSummary").offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>

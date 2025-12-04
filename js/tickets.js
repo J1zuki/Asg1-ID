@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ticketPrice = Number(this.options[this.selectedIndex].dataset.price || 0);
         updateSummary();
     });
-    
+
     qtyInput.addEventListener("input", function () {
         if (qtyInput.value < 1) qtyInput.value = 1;
         updateSummary();
@@ -50,10 +50,44 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("dateSelect").addEventListener("change", updateSummary);
     document.getElementById("timeSelect").addEventListener("change", updateSummary);
 
-    document.querySelector(".book-btn").addEventListener("click", function () {
 
+    // ---------------------------------------------------------------
+    // ✅ FIXED BOOK BUTTON WITH VALIDATION (ONLY CLICK HANDLER NOW)
+    // ---------------------------------------------------------------
+    document.querySelector(".book-btn").addEventListener("click", function (event) {
+
+        let date = document.getElementById("dateSelect");
+        let time = document.getElementById("timeSelect");
+        let ticket = document.getElementById("ticketSelect");
+        let qty = document.getElementById("qtyInput");
+
+        // --- VALIDATION ---
+        if (date.value === "") {
+            date.setCustomValidity("Please select a date.");
+            date.reportValidity();
+            return;
+        } else date.setCustomValidity("");
+
+        if (time.value === "") {
+            time.setCustomValidity("Please select a time.");
+            time.reportValidity();
+            return;
+        } else time.setCustomValidity("");
+
+        if (ticket.value === "") {
+            ticket.setCustomValidity("Please select a ticket type.");
+            ticket.reportValidity();
+            return;
+        } else ticket.setCustomValidity("");
+
+        if (qty.value <= 0) {
+            qty.setCustomValidity("Quantity must be at least 1.");
+            qty.reportValidity();
+            return;
+        } else qty.setCustomValidity("");
+
+        // VALID → Show summary
         document.getElementById("orderSummary").style.display = "block";
-
         updateSummary();
 
         window.scrollTo({
@@ -62,24 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    function saveOrder() {
-    const ticketType = document.getElementById("ticketType").value;
-    const quantity = document.getElementById("quantity").value;
-    const date = document.getElementById("date").value;
-
-    const priceList = {
-        "VIP": 280,
-        "Standard": 120,
-        "Student": 80
-    };
-
-    const price = priceList[ticketType];
-
-    localStorage.setItem("orderDate", date);
-    localStorage.setItem("orderTicket", ticketType);
-    localStorage.setItem("orderQty", quantity);
-    localStorage.setItem("orderPrice", price);
-
-    window.location.href = "ticketspayment.html";
-    }
 });
