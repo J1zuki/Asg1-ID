@@ -35,78 +35,72 @@
 
     <div class="payment-page">
         <div class="payment-box">
+            <form id="paymentForm">
+                <label>Card Number</label>
+                <input id="cardNumber" type="text" maxlength="16" pattern="\d{16}" required>
 
-            <label>Card Number</label>
-            <input type="text">
+                <div class="row">
+                    <div class="half">
+                        <label>Expiry Date</label>
+                        <input id="expiryDate" type="text" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+                    </div>
 
-            <div class="row">
-                <div class="half">
-                    <label>Expiry Date</label>
-                    <input type="text">
+                    <div class="half">
+                        <label>CVV</label>
+                        <input id="cvv" type="text" maxlength="3" pattern="\d{3}" required>
+                    </div>
                 </div>
-                <div class="half">
-                    <label>CVV</label>
-                    <input type="text">
-                </div>
-            </div>
 
-            <label>Name on Card</label>
-            <input type="text">
+                <label>Name on Card</label>
+                <input id="cardName" type="text" required>
 
-            <label>Billing Address</label>
-            <input type="text">
+                <label>Billing Address</label>
+                <input id="billingAddress" type="text" required>
 
-            <label>Country</label>
-            <div class="dropdown-container">
-                <select>
-                    <option selected disabled>Select</option>
+                <label>Country</label>
+                <select id="country" required>
+                    <option disabled selected value="">Select</option>
                     <option>Singapore</option>
                     <option>Malaysia</option>
                     <option>Indonesia</option>
+                    <option>Thailand</option>
+                    <option>Japan</option>
+                    <option>South Korea</option>
                 </select>
-            </div>
-
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
-
-        <h3 class="summary-title">Order Summary</h3>
-        <table class="summary-table">
-            <tr>
-                <td>Date</td>
-                <td>21st December 2025</td>
-            </tr>
-            <tr>
-                <td>Ticket Type</td>
-                <td>VIP</td>
-            </tr>
-            <tr>
-                <td>Quantity</td>
-                <td>3</td>
-            </tr>
-        </table>
-
-        <hr class="divider">
-        <table class="summary-table">
-            <tr>
-                <td>Subtotal</td>
-                <td>SGD $840.00</td>
-            </tr>
-            <tr>
-                <td>GST</td>
-                <td>SGD $9.00</td>
-            </tr>
-            <tr>
-                <td>Service Charge (5%)</td>
-                <td>SGD $5.00</td>
-            </tr>
-            <tr class="total-row">
-                <td><b>Total</b></td>
-                <td><b>SGD $854.00</b></td>
-            </tr>
-        </table>
-
-        <button class="submit-btn">Submit</button>
-
-        <footer class="payment-footer">2025 Copyright © IZONE Fandom</footer>
     </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <p id="popupText">Payment has been paid successfully!</p>
+            <button id="popupBtn">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Copyright © IZ*ONE Fandom</p>
+    </footer>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (this.checkValidity()) {
+                document.getElementById("popupOverlay").style.display = "flex";
+            } else {
+                this.reportValidity();
+            }
+        });
+
+        // OK Button → Close popup + Clear form
+        document.getElementById("popupBtn").addEventListener("click", function() {
+            document.getElementById("popupOverlay").style.display = "none";
+
+            // Clear all inputs in the form
+            document.getElementById("paymentForm").reset();
+        });
+    </script>
 </body>
 </html>

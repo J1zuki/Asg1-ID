@@ -62,4 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    function saveOrder() {
+    const ticketType = document.getElementById("ticketType").value;
+    const quantity = document.getElementById("quantity").value;
+    const date = document.getElementById("date").value;
+
+    const priceList = {
+        "VIP": 280,
+        "Standard": 120,
+        "Student": 80
+    };
+
+    const price = priceList[ticketType];
+
+    localStorage.setItem("orderDate", date);
+    localStorage.setItem("orderTicket", ticketType);
+    localStorage.setItem("orderQty", quantity);
+    localStorage.setItem("orderPrice", price);
+
+    window.location.href = "ticketspayment.html";
+    }
 });
