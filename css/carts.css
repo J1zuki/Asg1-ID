@@ -54,7 +54,7 @@ nav a {
     margin: 25px auto 10px auto;
     display: flex;
     align-items: center;
-    gap: 10px; /* space between arrow + text */
+    gap: 10px;
 }
 
 .back-arrow i {
@@ -109,7 +109,6 @@ nav a {
     cursor: pointer;
 }
 
-/* ORDER SUMMARY */
 .order-summary {
     width: 90%;
     margin: 30px auto;
@@ -149,7 +148,6 @@ nav a {
     cursor: pointer;
 }
 
-/* FOOTER */
 footer {
     margin-top: 40px;
     padding: 20px;
@@ -158,22 +156,44 @@ footer {
     color: white;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .header {
+@media (max-width: 620px) {
+    header {
         flex-direction: column;
-        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .logo {
+        height: 80px;
+        margin: 0 auto 10px auto;
+        display: block;
     }
 
     nav {
-        margin: 10px 0;
-        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0; 
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 15px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .usericon {
+        font-size: 18px;
+        margin-left: 5px;
     }
 
     .cart-title {
-        text-align: center;
+        text-align: left;
         margin-left: 0;
     }
 

@@ -19,8 +19,8 @@
             <a href="products.html">Products</a>
             <a href="tickets.html">Tickets</a>
             <a href="contactus.html">Contact Us</a>
+            <a href="profile.html" class="usericon">👤</a>
         </nav>
-        <a href="profile.html" class="usericon"><i class="fa-solid fa-user"></i></a>
     </header>
 
     <div class="cart-header-row">
@@ -52,7 +52,6 @@
             <i class="fa-solid fa-trash delete"></i>
         </div>
 
-        <!-- ITEM 3 -->
         <div class="cart-card">
             <img src="./images/Izone Notebook 1.jpg">
             <div class="cart-info">
@@ -118,7 +117,6 @@
         document.querySelectorAll(".delete").forEach(button => {
             button.addEventListener("click", function () {
 
-                // Remove the entire cart item
                 this.closest(".cart-card").remove();
             });
         });
