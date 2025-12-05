@@ -1,36 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
+    text-align: center;
+    background: url("../images/background.jpg") center/cover no-repeat fixed;
     color: white;
-
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 15px 40px;
+    border-bottom: 1px solid black;
+    background: black;
 }
 
 .logo {
-    height: 40px;
+    height: 80px;
 }
 
-nav a {
-    margin: 0 12px;
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+}
+
+nav a,
+.usericon {
     text-decoration: none;
     color: white;
 }
 
+nav a {
+    font-size: 15px;
+}
+
 .usericon {
-    font-size: 20px;
-    text-decoration: none;
-    color: #333;
+    margin-left: 20px;
+    font-size: 22px;
+    cursor: pointer;
 }
 
 .album-section {
@@ -40,12 +53,10 @@ nav a {
 
 .album-card {
     display: flex;
-    flex-direction: row;
-    background: rgba(0,0,0,0.5);
+    gap: 30px;
     padding: 25px;
     border-radius: 15px;
-    gap: 30px;
-    align-items: flex-start;
+    background: rgba(0,0,0,0.5);
 }
 
 .album-image img {
@@ -62,13 +73,12 @@ nav a {
 }
 
 .album-info h2 {
-    margin-top: 0;
+    margin: 0;
 }
 
 .album-info ul {
     margin-top: 10px;
     padding-left: 20px;
-    text-align: left;
 }
 
 footer {
@@ -76,4 +86,76 @@ footer {
     padding: 20px;
     font-size: 14px;
     color: white;
+}
+
+@media (max-width: 620px) {
+
+    /* Header stacks: logo on top, nav below */
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    /* Keep desktop-size logo but centered */
+    .logo {
+        height: 80px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    /* NAVBAR appears BELOW logo */
+    nav {
+        width: 100%;
+        margin-left: 0; /* remove desktop push-right */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* clean wrapping if needed */
+        gap: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* Navbar text smaller so it fits */
+    nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* Profile icon stays same size but aligned properly */
+    .usericon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    /* Album container narrower for mobile */
+    .album-section {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    /* Album card becomes vertical */
+    .album-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .album-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .album-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .album-info ul {
+        padding-left: 18px;
+    }
 }
