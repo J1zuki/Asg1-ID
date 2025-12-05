@@ -55,10 +55,6 @@ nav a {
     text-align: center;
 }
 
-.profile-photo-wrapper {
-    text-align: center;
-}
-
 .profile-row {
     display: flex;
     justify-content: center;
@@ -69,9 +65,9 @@ nav a {
 .profile-photo {
     width: 140px;
     height: 140px;
-    background: #d7d7d7;
-    border-radius: 50%;
     border: 5px solid #ccc;
+    border-radius: 50%;
+    background: #d7d7d7;
     background-size: cover;
     background-position: center;
 }
@@ -79,34 +75,31 @@ nav a {
 .edit-icon-side {
     width: 35px;
     height: 35px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 18px;
 }
 
 .username {
-    display: block;
     margin-top: 10px;
     font-weight: bold;
     font-size: 20px;
     color: white;
-    justify-content: center;
-    align-items: center;
 }
 
 .account-box {
-    background: #e6e6e6;
+    width: 80%;
+    margin: 20px auto;
     padding: 25px;
+    background: #e6e6e6;
     border-radius: 12px;
     text-align: left;
-    margin: 20px auto;
-    width: 80%;
 }
 
 .account-box h3 {
-    margin-top: 0;
+    margin: 0;
 }
 
 .order-title {
@@ -118,8 +111,8 @@ nav a {
 .order-tabs {
     display: flex;
     justify-content: center;
-    margin: 15px 0 25px 0;
     gap: 15px;
+    margin: 15px 0 25px;
 }
 
 .order-tab {
@@ -133,8 +126,8 @@ nav a {
 .order-card {
     width: 85%;
     margin: 20px auto;
-    background: white;
     padding: 15px;
+    background: white;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -150,24 +143,129 @@ nav a {
 }
 
 .order-info {
-    text-align: left;
     flex: 1;
+    text-align: left;
     margin-left: 20px;
 }
 
 .order-status {
-    border: none;
     padding: 8px 16px;
+    border: none;
     border-radius: 12px;
     font-size: 14px;
     background: white;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
     margin-top: 40px;
-    font-size: 14px;
+    padding: 20px;
     background: black;
     color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 620px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .logo {
+        height: 80px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: 0; 
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .usericon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .profile-section {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .edit-icon-side {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .username {
+        font-size: 18px;
+    }
+
+    .account-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .order-title {
+        font-size: 20px;
+    }
+
+    .order-tabs {
+        gap: 10px;
+    }
+
+    .order-tab {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .order-card {
+        width: 95%;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .order-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .order-info {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .order-status {
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
