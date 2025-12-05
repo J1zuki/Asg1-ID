@@ -5,15 +5,10 @@
 }
 
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f5f5f5;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url("../images/background.jpg") center/cover no-repeat fixed;
+    color: white;
 }
 
 header {
@@ -26,7 +21,7 @@ header {
 }
 
 .logo {
-    height: 70px;
+    height: 80px;
 }
 
 nav {
@@ -35,42 +30,52 @@ nav {
     gap: 25px;
 }
 
-nav a {
-    color: white;
+nav a,
+.usericon {
     text-decoration: none;
+    color: white;
+}
+
+nav a {
     font-size: 15px;
 }
 
 .usericon {
     margin-left: 20px;
     font-size: 22px;
-    color: white;
+    cursor: pointer;
 }
 
-.banner {
+.mapbanner {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .banner img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .map-img {
-    width: 50%;
-    max-width: 40%;
-    display: block;
+    width: 45%;
+    max-width: 600px;
     margin: 0 auto;
+    display: block;
 }
 
 .heading {
     margin: 20px 0;
     font-size: 26px;
     font-weight: bold;
+}
+
+p, h1 {
+    color: white;
 }
 
 .content-area {
@@ -91,8 +96,8 @@ nav a {
 
 .form-box label {
     font-weight: bold;
-    display: block;
     margin: 10px 0 5px;
+    display: block;
 }
 
 .form-box input,
@@ -114,9 +119,9 @@ nav a {
     padding: 10px;
     background: white;
     border: 1px solid black;
-    cursor: pointer;
     border-radius: 5px;
     font-size: 15px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -151,32 +156,25 @@ nav a {
     text-decoration: underline;
 }
 
-p , h1 {
-    color: white;
-}
-
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(3px);
     justify-content: center;
     align-items: center;
 }
 
-/* Modal Box */
 .modal-content {
     background: white;
+    width: 350px;
     padding: 25px 35px;
     border-radius: 12px;
     text-align: center;
-    width: 350px;
     animation: popIn 0.3s ease-out;
+    color: black;
 }
 
 .modal-content h2 {
@@ -186,9 +184,9 @@ p , h1 {
 .modal-content button {
     margin-top: 15px;
     padding: 10px 20px;
-    border: none;
     background: red;
     color: white;
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
@@ -208,4 +206,78 @@ footer {
     color: white;
     padding: 20px;
     font-size: 14px;
+}
+
+@media (max-width: 620px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .logo {
+        height: 80px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: 0; 
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .usericon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .map-img {
+        width: 90%;
+        max-width: none;
+    }
+
+    .heading {
+        font-size: 22px;
+        margin-top: 25px;
+    }
+
+    .content-area {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-box {
+        width: 100%;
+        padding: 20px;
+        color: black;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 85%;
+        padding: 20px;
+    }
 }
