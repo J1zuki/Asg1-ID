@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID Assignment 1 - Members Page</title>
+    <link rel="stylesheet" href="./css/members.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
         <img src="./images/IzoneLogo.png" class="logo" alt="IZ*ONE Logo">
-
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
         <nav>
             <a href="index.html">Home</a>
@@ -25,16 +23,6 @@
             <a href="profile.html" class="usericon">👤</a>
         </nav>
     </header>
-
-    <div class="mobile-dropdown" id="mobileDropdown">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="members.html"><i class="fa-solid fa-users"></i> Members</a>
-        <a href="albums.html"><i class="fa-solid fa-music"></i> Albums</a>
-        <a href="products.html"><i class="fa-solid fa-cart-shopping"></i> Products</a>
-        <a href="tickets.html"><i class="fa-solid fa-ticket"></i> Tickets</a>
-        <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
-        <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
-    </div>
 
     <section class="title">
         <h1>Meet the 12 Members of IZ*ONE</h1>
@@ -169,11 +157,5 @@
 <footer>
     <p>©2025 Copyright IZ*ONE Fanpage</p>
 </footer>
-
-<script>
-    function toggleMenu() {
-        document.getElementById("mobileDropdown").classList.toggle("show");
-    }
-</script>
 </body>
 </html>
