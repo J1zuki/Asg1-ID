@@ -33,17 +33,15 @@ nav a {
     color: #333;
 }
 
-/* Fix album section width */
 .album-section {
     width: 80%;
     margin: 40px auto;
 }
 
-/* FIX: MAKE ALBUM CARD LEFT–RIGHT (your wireframe layout) */
 .album-card {
-    display: flex;                  /* forces left/right layout */
+    display: flex;
     flex-direction: row;
-    background: rgba(0,0,0,0.5);    /* dark transparent bg */
+    background: rgba(0,0,0,0.5);
     padding: 25px;
     border-radius: 15px;
     gap: 30px;
