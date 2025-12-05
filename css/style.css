@@ -118,8 +118,6 @@ footer {
 }
 
 @media (max-width: 620px) {
-
-    /* Header becomes stacked (logo above nav) */
     header {
         flex-direction: column;
         justify-content: center;
@@ -129,37 +127,32 @@ footer {
         z-index: 99999;
     }
 
-    /* Keep desktop-size logo but centered */
     .logo {
         height: 80px;
         margin: 0 auto 10px auto;
         display: block;
     }
 
-    /* NAVBAR appears BELOW logo */
     nav {
         width: 100%;
-        margin-left: 0; /* remove desktop push-right */
+        margin-left: 0; 
         display: flex;
         justify-content: center;
-        flex-wrap: wrap; /* clean wrapping if needed */
+        flex-wrap: wrap;
         gap: 15px;
         margin-bottom: 5px;
     }
 
-    /* Navbar text smaller so it fits */
     nav a {
         font-size: 13px;
         white-space: nowrap;
     }
 
-    /* Profile icon stays same size but aligned properly */
     .usericon {
         font-size: 18px;
         margin-left: 5px;
     }
 
-    /* General text sizing adjustments */
     h1 {
         font-size: 26px;
         margin-top: 15px;
@@ -174,13 +167,11 @@ footer {
         padding: 0 15px;
     }
 
-    /* Video responsive */
     .videobox iframe {
         width: 90%;
         height: 250px;
     }
 
-    /* Member grid responsive */
     .membersgrid {
         grid-template-columns: 1fr 1fr;
         padding: 10px;
