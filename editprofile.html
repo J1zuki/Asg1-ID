@@ -19,8 +19,8 @@
             <a href="products.html">Products</a>
             <a href="tickets.html">Tickets</a>
             <a href="contactus.html">Contact Us</a>
+            <a href="profile.html" class="usericon">👤</a>
         </nav>
-        <a href="profile.html" class="usericon">👤</a>
     </header>
 
     <div class="arrow-container">
@@ -43,7 +43,7 @@
         <div class="form-box">
             <h3 class="form-title">
                 <em>Account Information Update</em>
-                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-pen-to-square edit-icon"></i>
             </h3>
 
             <label>Name</label>
@@ -66,7 +66,7 @@
             <label>Credit Card (If Changed)</label>
             <input type="text" id="cardInput" required>
 
-            <button class="change-btn" type="submit">Change</button>
+            <button class="change-btn" type="button">Change</button>
 
         </div>
     </form>
@@ -83,26 +83,24 @@
     </footer>
 
     <script>
-        document.getElementById("profileUpload").addEventListener("change", function(event){
-            const reader = new FileReader();
-            reader.onload = function(){
-                document.getElementById("profilePreview").style.backgroundImage = `url(${reader.result})`;
-                document.getElementById("profilePreview").style.backgroundSize = "cover";
-                document.getElementById("profilePreview").style.backgroundPosition = "center";
-            }
-            reader.readAsDataURL(event.target.files[0]);
+        // Prevent pen icon from triggering modal
+        document.querySelector(".edit-icon").addEventListener("click", function (e) {
+            e.stopPropagation();
         });
-    </script>
 
-    <script>
+        // Change button -> Show modal
         document.querySelector(".change-btn").addEventListener("click", function(e){
             const form = document.querySelector("form");
+
             if (!form.checkValidity()) {
-                form.reportValidity();  
+                form.reportValidity();
                 return;
             }
-            document.getElementById("successModal").style.display = "block";
+
+            document.getElementById("successModal").style.display = "flex";
         });
+
+        // Close modal
         document.getElementById("closeModal").addEventListener("click", function(){
             document.getElementById("successModal").style.display = "none";
         });

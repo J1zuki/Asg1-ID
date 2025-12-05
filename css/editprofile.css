@@ -51,9 +51,8 @@ nav a {
 
 .arrow-container {
     width: 100%;
+    margin: 10px 0 0 20px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 .back-arrow i {
@@ -61,28 +60,28 @@ nav a {
     color: white;
 }
 
+/* PROFILE SECTION */
 .profile-section {
-    text-align: center;
     margin-top: 10px;
 }
 
 .profile-img {
     width: 130px;
     height: 130px;
-    background: white;
-    border-radius: 50%;
     margin: auto;
+    border-radius: 50%;
+    background: white;
     position: relative;
-    overflow: visible !important;
 }
 
+/* UPLOAD BUTTON */
 .upload-btn {
     position: absolute;
     right: -4px;
     bottom: -4px;
-    background: black;
     width: 32px;
     height: 32px;
+    background: black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -96,11 +95,7 @@ nav a {
 }
 
 .upload-btn input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    width: 0;
-    height: 0;
+    display: none;
 }
 
 .username {
@@ -108,6 +103,7 @@ nav a {
     margin-top: 5px;
 }
 
+/* FORM BOX */
 .form-box {
     width: 75%;
     max-width: 750px;
@@ -127,79 +123,107 @@ label {
 }
 
 input {
-    width: 95%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.dob-row {
-    width: 95%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-.dob-row input {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
 }
 
-.dob-icon {
-    font-size: 20px;
-    margin-left: 10px;
+/* DOB ROW */
+.dob-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* CHANGE BUTTON */
 .change-btn {
     display: block;
     margin: 30px auto;
     width: 40%;
     padding: 12px;
     border-radius: 25px;
-    border: 1px solid black;
     background: white;
+    border: 1px solid black;
     cursor: pointer;
     font-size: 16px;
 }
 
+/* MODAL */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
+    width: 300px;
+    padding: 18px 25px;
     background: white;
-    padding: 20px 30px;
-    width: 320px;
     border-radius: 10px;
-    margin: 15% auto;
     text-align: center;
-    font-size: 16px;
 }
 
+/* MODAL CLOSE BUTTON */
 #closeModal {
     margin-top: 15px;
     padding: 8px 20px;
     border-radius: 20px;
-    border: 1px solid white;
     background: red;
-    cursor: pointer;
     color: white;
+    cursor: pointer;
+    border: none;
 }
 
+/* FOOTER */
 footer {
-    text-align: center;
+    margin-top: 40px;
     padding: 20px 0;
-    border-top: 1px solid black;
-    background-color: black;
+    background: black;
     color: white;
     font-size: 12px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+
+@media (max-width: 620px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .logo {
+        height: 80px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: 0; 
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .usericon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
 }
