@@ -27,16 +27,11 @@ The site design focuses on clarity, responsiveness, and easy navigation, ensurin
 ---
 
 User Stories
--As a new fan, I want to learn the basic information about IZ*ONE so I can understand the group better.
-
+- As a new fan, I want to learn the basic information about IZ*ONE so I can understand the group better.
 - As a returning fan, I want to view member profiles so that I can read updates and details about them.
-
 - As a shopper, I want to browse products so that I can buy IZ*ONE merchandise.
-
 - As a concertgoer, I want to view ticket information so that I can attend events easily.
-
 - As a user, I want a clean navigation bar so that I can move between pages without confusion.
-
 - As a visitor, I want a contact form so that I can reach out with questions or fan messages.
 
 ---
@@ -50,46 +45,28 @@ Features:
 
 Existing Features
 - Homepage Hero Section – Introduces users to IZ*ONE with a hero image, quote, and a CTA button to view members.
-
 - Navigation Bar – Allows users to move across pages quickly.
-
 - About Section – Provides a short background of the group.
-
 - Featured MV Embed – Displays a YouTube music video inside an iframe.
-
 - Members Page – Showcases each member with images and details.
-
 - Albums Page – Displays album covers and basic information.
-
 - Products Page – Lists official-style merchandise.
-
 - Tickets Page – Includes mock ticket information for events.
-
 - Contact Us Page – Features a form for user inquiries.
-
 - Profile Icon – Gives a more personalized or account-style feel.
-
 - Responsive Layout – The site adapts to mobile, tablet, and desktop screens.
 
 Features Left to Implement
-
 - Dark mode toggle
-
 - Search bar for members or albums
-
 - User login system
 ---
 
 Technologies Used:
-
 - HTML – Structure of all pages
-
 - CSS – Styling and layout
-
 - JavaScript – Basic functions such as menu toggling
-
 - YouTube Embed API – For music video integration
-
 - Figma – Used to plan wireframes and prototypes
 
 ---
@@ -123,7 +100,7 @@ Content
 - Lyrics and quotes belong to their original owners
 
 Media
-- Images from official IZ*ONE photos and fan-made assets (non-commercial classroom use)
+- Images from official IZ*ONE photos and fan-made assets
 - YouTube embedded MV from official source
 
 Acknowledgements
